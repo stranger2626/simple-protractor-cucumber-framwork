@@ -13,7 +13,8 @@
   "devDependencies": {},
   "scripts": {
     "e2e": "protractor ./test/e2e/config/config.js",
-    "postinstall": "webdriver-manager update"
+    "postinstall": "webdriver-manager update",
+    "pree2e": "webdriver-manager start"
   },
   "author": "",
   "license": "ISC"
