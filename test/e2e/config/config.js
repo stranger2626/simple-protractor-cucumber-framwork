@@ -14,7 +14,7 @@ exports.config = {
     cucumberOpts: {
         require: [path.resolve('./test/e2e/step_definitions/**/*.js')],
         ignoreUncaughtExceptions: true,
-        format: 'json:report.json'
+        format: 'json:./reports/report.json'
     },
     onPrepare: () => {
         browser.ignoreSynchronization = true;
