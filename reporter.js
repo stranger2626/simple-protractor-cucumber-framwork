@@ -8,4 +8,4 @@ let options = {
         launchReport: true
     };
  
-    reporter.generate(options);
+reporter.generate(options);
