@@ -16,7 +16,10 @@
     "e2e": "protractor ./test/e2e/config/config.js",
     "postinstall": "webdriver-manager update",
     "pree2e": "start cmd /k \"node_modules\\.bin\\webdriver-manager start\"",
-    "poste2e": "node reporter.js"
+    "poste2e": "node reporter.js",
+    "e2e:update": "webdriver-manager update",
+    "e2e:no-server-start": "protractor ./test/e2e/config/config.js",
+    "e2e:generate-report": "node reporter.js" 
   },
   "author": "",
   "license": "ISC"
