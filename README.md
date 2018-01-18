@@ -1,4 +1,4 @@
-# JS Unit Testing
+# JS TA Framework basics
 
 ## Prerequisites
 1. NODE version >=8.9.1
