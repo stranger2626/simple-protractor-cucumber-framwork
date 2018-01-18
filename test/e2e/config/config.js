@@ -18,6 +18,6 @@ exports.config = {
     },
     onPrepare: () => {
         browser.ignoreSynchronization = true;
-        browser.manage().window().setSize(1036,768);
+        browser.manage().window().maximize();
     }
 };
