@@ -1,0 +1,20 @@
+{
+  "name": "simple_protractor_cucumber_framework",
+  "version": "1.0.0",
+  "description": "A simple proctractor and cucumber bdd test automation framework",
+  "main": "index.js",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "cucumber": "^3.2.1",
+    "protractor": "^5.2.2",
+    "protractor-cucumber-framework": "^4.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "e2e": "protractor ./test/e2e/config/config.js",
+    "postinstall": "webdriver-manager update"
+  },
+  "author": "",
+  "license": "ISC"
+}

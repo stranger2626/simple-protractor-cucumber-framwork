@@ -1,0 +1,19 @@
+{
+    "Menu": {
+        "isCollection": false,
+        "selector": "button.hamburger-menu__button"
+    },
+    "Expanded Menu": {
+        "isCollection": false,
+        "selector": ".hamburger-menu__list"
+    },
+    "Expanded Menu Sublists": {
+        "isCollection": true,
+        "selector": ".hamburger-menu__sub-list"
+    },
+    "Expanded Menu Row Titles": {
+        "isCollection": true,
+        "selector": ".hamburger-menu__list > .hamburger-menu__item > a.hamburger-menu__link"
+    }
+    
+}
