@@ -1,6 +1,7 @@
 "use strict";
 
 const path = require('path');
+const yargs = require('yargs').argv;
 
 exports.config = {
     allScriptsTimeout: 200000,
@@ -11,10 +12,12 @@ exports.config = {
     frameworkPath: require.resolve('protractor-cucumber-framework'),
     ignoreUncaughtExceptions: true,
     browser: 'chrome',
+    disableChecks: true,
     cucumberOpts: {
         require: [path.resolve('./test/e2e/step_definitions/**/*.js')],
         ignoreUncaughtExceptions: true,
-        format: 'json:./reports/report.json'
+        format: 'json:./reports/report.json',
+        tags: yargs.tag||'@epam'
     },
     onPrepare: () => {
         browser.ignoreSynchronization = true;

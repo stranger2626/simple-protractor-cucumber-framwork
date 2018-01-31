@@ -9,7 +9,8 @@
     "cucumber": "^3.2.1",
     "cucumber-html-reporter": "^3.0.4",
     "protractor": "^5.2.2",
-    "protractor-cucumber-framework": "^4.1.1"
+    "protractor-cucumber-framework": "^4.1.1",
+    "yargs": "^11.0.0"
   },
   "devDependencies": {},
   "scripts": {

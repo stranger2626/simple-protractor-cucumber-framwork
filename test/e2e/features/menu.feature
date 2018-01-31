@@ -1,5 +1,6 @@
 Feature: Menu
 
+  @epam
   Scenario: Verify user can open menu
     Given I open "https://www.epam.com/" url
     When I wait until "Menu" is present
@@ -11,4 +12,3 @@ Feature: Menu
       And Count of "Expanded Menu Sublists" should be "4"
       And Text of "Expanded Menu Row Titles" should contain "WHAT WE DO"
       And Count of "Expanded Menu Row Titles" should be "6"
-      And I wait "10" seconds
