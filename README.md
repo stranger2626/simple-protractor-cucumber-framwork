@@ -1,4 +1,4 @@
-# JS TA Framework basics
+# JS BDD Frameworks Cucumber+Protractor
 
 ## Prerequisites
 1. NODE version >=8.9.1
