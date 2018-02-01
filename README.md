@@ -11,11 +11,13 @@ npm install
 
 ## Run tests
 ```
-npm e2e
+npm run e2e
 ```
 ### will create a `report` folder with:
 * `cucumber_report.html` output
 
-## Run e2e:update to update wedriver
+## Run [npm run e2e:update] to update wedriver
 
-## Run e2e:generate-report to generate report manually (or if any tests have failed)
+## Run [npm run e2e:generate-report] to generate report manually (or if any tests have failed)
+
+## To start selenium in a separate window run [npm run e2e]
