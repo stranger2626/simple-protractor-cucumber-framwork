@@ -14,6 +14,10 @@
     "Expanded Menu Row Titles": {
         "isCollection": true,
         "selector": ".hamburger-menu__list > .hamburger-menu__item > a.hamburger-menu__link"
+    },
+    "Globus Icon": {
+        "isCollection": false,
+        "selector": ".location-selector__button"
     }
     
 }

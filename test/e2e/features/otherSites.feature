@@ -1,3 +1,4 @@
+@all
 Feature: Access to other sites
 
   @bash

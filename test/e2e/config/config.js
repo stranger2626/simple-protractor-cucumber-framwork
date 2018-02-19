@@ -6,7 +6,6 @@ const yargs = require('yargs').argv;
 exports.config = {
     allScriptsTimeout: 200000,
     getPageTimeout: 200000,
-    seleniumAddress: 'http://localhost:4444/wd/hub',
     specs: [path.resolve('./test/e2e/features/*.feature')],
     framework: 'custom',
     frameworkPath: require.resolve('protractor-cucumber-framework'),
