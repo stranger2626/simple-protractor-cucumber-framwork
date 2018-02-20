@@ -47,7 +47,6 @@ const epamPO = require('../../po/epamPageObject.json');
         return browser.executeScript("arguments[0].setAttribute('style', arguments[1]);", webElement, styleOptions).then(() => {
             return browser.wait(() => {
                 return getPageObjectElement(alias).getCssValue('border').then((border) => {
-                    console.log(border.toString());
                     return border.toString().indexOf('2px solid rgb(255,') > -1;
                 });
             }, 5000, 'Style is not applied!');

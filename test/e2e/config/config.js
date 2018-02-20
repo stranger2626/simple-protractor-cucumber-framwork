@@ -2,6 +2,7 @@
 
 const path = require('path');
 const yargs = require('yargs').argv;
+const logger = require('./loggerConfig.js').logger;
 
 exports.config = {
     allScriptsTimeout: 200000,
@@ -16,9 +17,10 @@ exports.config = {
         require: [path.resolve('./test/e2e/step_definitions/**/*.js')],
         ignoreUncaughtExceptions: true,
         format: 'json:./reports/report.json',
-        tags: yargs.tag||'@epam'
+        tags: yargs.tag || '@epam'
     },
     onPrepare: () => {
+        logger.info('Maximizing browser window');
         browser.ignoreSynchronization = true;
         browser.manage().window().maximize();
     }

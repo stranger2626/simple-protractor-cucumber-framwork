@@ -10,11 +10,12 @@
     "cucumber-html-reporter": "^3.0.4",
     "protractor": "^5.2.2",
     "protractor-cucumber-framework": "^4.1.1",
+    "winston": "^2.4.0",
     "yargs": "^11.0.0"
   },
   "devDependencies": {},
   "scripts": {
-    "e2e": "protractor ./test/e2e/config/config.js || exit 0",
+    "e2e": "protractor ./test/e2e/config/config.js",
     "postinstall": "webdriver-manager update",
     "poste2e": "node reporter.js",
     "e2e:update": "webdriver-manager update",
