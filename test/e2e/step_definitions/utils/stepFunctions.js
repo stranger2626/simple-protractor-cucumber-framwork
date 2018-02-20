@@ -13,12 +13,6 @@ const epamPO = require('../../po/epamPageObject.json');
         }
     };
 
-    let getPageObjectElementSelector = (alias) => {
-        let pageElement = epamPO[alias];
-        pageElement = element(by.css(pageElement.selector));
-        return pageElement;
-    };
-
     let expectedCondition = (shouldBe) => {
         let expectedConditionFunction;
     
@@ -49,7 +43,6 @@ const epamPO = require('../../po/epamPageObject.json');
 
     let highlightElement = (alias) => {
         let styleOptions = "color: Red; border: 2px solid red;";
-        // let scriptArguments = "arguments[0].setAttribute('style', arguments[1]);";
         let webElement = getPageObjectElement(alias).getWebElement();
         return browser.executeScript("arguments[0].setAttribute('style', arguments[1]);", webElement, styleOptions).then(() => {
             return browser.wait(() => {
@@ -66,6 +59,5 @@ const epamPO = require('../../po/epamPageObject.json');
     module.exports = {
         getPageObjectElement,
         expectedCondition,
-        getPageObjectElementSelector,
         highlightElement
     }
