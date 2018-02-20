@@ -1,6 +1,6 @@
 const EC = protractor.ExpectedConditions;
 const epamPO = require('../../po/epamPageObject.json');
-
+const logger = require('../../config/loggerConfig.js').logger;
     let getPageObjectElement = (alias) => {
         let pageElement = epamPO[alias];
         if (pageElement['isCollection'] === true) {
@@ -36,7 +36,8 @@ const epamPO = require('../../po/epamPageObject.json');
                 expectedConditionFunction = EC.stalenessOf.bind(EC);
                 break;
             default:
-                throw new Error("Wrong expected condition provided.");
+                logger.error(`Wrong expected condition provided: [${shouldBe}]`);
+                throw new Error('Wrong expected condition provided.');
         }
         return expectedConditionFunction;
     };
@@ -51,7 +52,7 @@ const epamPO = require('../../po/epamPageObject.json');
                 });
             }, 5000, 'Style is not applied!');
         }, (error)=> {
-            console.log('Error is: ' + error);
+            loggers.error('Error is: ' + error);
         });
     };
 

@@ -16,7 +16,7 @@
   "devDependencies": {},
   "scripts": {
     "e2e": "protractor ./test/e2e/config/config.js",
-    "pree2e": "del /f combined.log",
+    "pree2e": "del /f combined.log, error.log",
     "postinstall": "webdriver-manager update",
     "poste2e": "node reporter.js",
     "e2e:update": "webdriver-manager update",
