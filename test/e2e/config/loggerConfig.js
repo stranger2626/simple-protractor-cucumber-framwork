@@ -6,14 +6,18 @@ let logger = new (winston.Logger) ({
             colorize: true
             }),
         new (winston.transports.File) ({
-             filename: 'combined.log'
+             filename: 'combined.log',
+             timestamp: function() {
+                let currentMoment = new Date(Date.now()); 
+                return currentMoment.toUTCString();
+            }
             }),
         new (winston.transports.File)({
             name: 'error-log',
             filename: 'error.log',
             level: 'error'
           })
-    ]
+    ],
 });
 
 module.exports = {
