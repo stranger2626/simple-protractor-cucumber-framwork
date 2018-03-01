@@ -19,5 +19,3 @@ npm run e2e
 ## Run [npm run e2e:update] to update wedriver
 
 ## Run [npm run e2e:generate-report] to generate report manually (or if any tests have failed)
-
-## To start selenium in a separate window run [npm run e2e]
