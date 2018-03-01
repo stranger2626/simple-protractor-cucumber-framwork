@@ -1,4 +1,4 @@
-# JS BDD Frameworks Cucumber+Protractor
+# JS BDD Frameworks Cucumber+Protractor+Winston
 
 ## Prerequisites
 1. NODE version >=8.9.1
