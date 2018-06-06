@@ -6,3 +6,4 @@ report.json
 cucumber_report.html
 combined.log
 error.log
+reports/
