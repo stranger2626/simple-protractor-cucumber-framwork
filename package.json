@@ -19,7 +19,6 @@
     "pree2e": "del /f combined.log, error.log",
     "postinstall": "webdriver-manager update",
     "preinstall": "mkdir reports",
-    "poste2e": "node reporter.js",
     "e2e:update": "webdriver-manager update",
     "e2e:generate-report": "node reporter.js",
     "e2e:start-server": "start cmd /k \"node_modules\\.bin\\webdriver-manager start\""

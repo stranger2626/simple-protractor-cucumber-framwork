@@ -9,7 +9,7 @@ let logger = new (winston.Logger) ({
              filename: 'combined.log',
              timestamp: function() {
                 let currentMoment = new Date(Date.now()); 
-                return currentMoment.toUTCString();
+                return currentMoment.toLocaleString('ru', { timeZone: 'Europe/Minsk'});
             }
             }),
         new (winston.transports.File)({

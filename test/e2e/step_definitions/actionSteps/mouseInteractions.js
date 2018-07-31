@@ -1,5 +1,5 @@
 "use strict";
-let {Then, When, Given} = require('cucumber');
+const {When} = require('cucumber');
 const elementHelper = require('../utils/stepFunctions.js').getPageObjectElement;
 const logger = require('../../config/loggerConfig.js').logger;
 
