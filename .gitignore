@@ -2,8 +2,6 @@
 .npmrc
 node_modules/
 npm-debug.log
-report.json
-cucumber_report.html
 combined.log
 error.log
 reports/

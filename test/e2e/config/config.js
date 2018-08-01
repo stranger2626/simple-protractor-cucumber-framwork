@@ -11,7 +11,11 @@ exports.config = {
     framework: 'custom',
     frameworkPath: require.resolve('protractor-cucumber-framework'),
     ignoreUncaughtExceptions: true,
-    browser: 'chrome',
+    capabilities: {
+        browserName: yargs.browser || 'chrome',
+        shardTestFiles: yargs.instances > 1,
+        maxInstances: yargs.instances || 1
+    },
     disableChecks: true,
     cucumberOpts: {
         require: [path.resolve('./test/e2e/step_definitions/**/*.js')],
