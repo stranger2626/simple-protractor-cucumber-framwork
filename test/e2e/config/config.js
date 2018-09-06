@@ -10,7 +10,6 @@ exports.config = {
     specs: [path.resolve('./test/e2e/features/*.feature')],
     framework: 'custom',
     frameworkPath: require.resolve('protractor-cucumber-framework'),
-    ignoreUncaughtExceptions: true,
     capabilities: {
         browserName: yargs.browser || 'chrome',
         shardTestFiles: yargs.instances > 1,
@@ -26,6 +25,6 @@ exports.config = {
     onPrepare: () => {
         logger.info('Maximizing browser window');
         browser.ignoreSynchronization = true;
-        browser.manage().window().maximize();
+        browser.manage().window().setSize(1000, 800);
     }
 };

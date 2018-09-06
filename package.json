@@ -10,8 +10,8 @@
     "cucumber-html-reporter": "^3.0.4",
     "protractor": "^5.4.0",
     "protractor-cucumber-framework": "^4.1.1",
-    "winston": "^2.4.0",
-    "yargs": "^11.0.0"
+    "winston": "^2.4.4",
+    "yargs": "^11.1.0"
   },
   "devDependencies": {},
   "scripts": {
