@@ -8,6 +8,7 @@
     "chai-as-promised": "^7.1.1",
     "cucumber": "^3.2.1",
     "cucumber-html-reporter": "^3.0.4",
+    "fs-extra": "^8.0.1",
     "protractor": "^5.4.0",
     "protractor-cucumber-framework": "^4.1.1",
     "winston": "^2.4.4",
@@ -15,7 +16,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "e2e": "protractor ./test/e2e/config/config.js --disableChecks",
+    "e2e": "protractor ./test/e2e/config/config.js",
+    "pree2e": "node ./test/e2e/config/utils/cleanup.js",
     "postinstall": "webdriver-manager update --versions.standalone=3.4.0 --gecko=false",
     "e2e:update": "webdriver-manager update",
     "e2e:generate-report": "node reporter.js",

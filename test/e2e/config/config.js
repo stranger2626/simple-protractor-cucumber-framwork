@@ -13,9 +13,13 @@ exports.config = {
     capabilities: {
         browserName: yargs.browser || 'chrome',
         shardTestFiles: yargs.instances > 1,
-        maxInstances: yargs.instances || 1
+        maxInstances: yargs.instances || 1,
+        chromeOptions: {
+            args: ['--no-sandbox']
+        }
     },
-    disableChecks: true,
+    disableChecks: true,    
+    directConnect: true,    
     cucumberOpts: {
         require: [path.resolve('./test/e2e/step_definitions/**/*.js')],
         ignoreUncaughtExceptions: true,
