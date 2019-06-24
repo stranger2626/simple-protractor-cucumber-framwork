@@ -15,13 +15,11 @@
   },
   "devDependencies": {},
   "scripts": {
-    "e2e": "protractor ./test/e2e/config/config.js",
-    "pree2e": "del /f combined.log, error.log",
-    "postinstall": "webdriver-manager update",
-    "preinstall": "mkdir reports",
+    "e2e": "protractor ./test/e2e/config/config.js --disableChecks",
+    "postinstall": "webdriver-manager update --versions.standalone=3.4.0 --gecko=false",
     "e2e:update": "webdriver-manager update",
     "e2e:generate-report": "node reporter.js",
-    "e2e:start-server": "start cmd /k \"node_modules\\.bin\\webdriver-manager start\""
+    "e2e:start-server": "webdriver-manager start --versions.standalone=3.4.0"
   },
   "author": "",
   "license": "ISC"
