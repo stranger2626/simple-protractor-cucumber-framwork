@@ -4,24 +4,24 @@
   "description": "A simple proctractor and cucumber bdd test automation framework",
   "main": "index.js",
   "dependencies": {
-    "chai": "^4.1.2",
+    "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
-    "cucumber": "^3.2.1",
-    "cucumber-html-reporter": "^3.0.4",
-    "fs-extra": "^8.0.1",
-    "protractor": "^5.4.0",
-    "protractor-cucumber-framework": "^4.1.1",
-    "winston": "^2.4.4",
-    "yargs": "^11.1.0"
+    "cucumber": "^5.1.0",
+    "cucumber-html-reporter": "^5.0.2",
+    "fs-extra": "^8.1.0",
+    "protractor": "^5.4.2",
+    "protractor-cucumber-framework": "^6.1.3",
+    "winston": "^3.2.1",
+    "yargs": "^14.0.0"
   },
   "devDependencies": {},
   "scripts": {
-    "e2e": "protractor ./test/e2e/config/config.js",
+    "e2e": "protractor ./test/e2e/config/protractor.config.js",
     "pree2e": "node ./test/e2e/config/utils/cleanup.js",
-    "postinstall": "webdriver-manager update --versions.standalone=3.4.0 --gecko=false",
+    "postinstall": "webdriver-manager update --versions.standalone=3.10.0 --gecko=false",
     "e2e:update": "webdriver-manager update",
-    "e2e:generate-report": "node reporter.js",
-    "e2e:start-server": "webdriver-manager start --versions.standalone=3.4.0"
+    "e2e:generate-report": "node ./test/e2e/utils/reporter.js",
+    "e2e:start-server": "webdriver-manager start --versions.standalone=3.10.0"
   },
   "author": "",
   "license": "ISC"
