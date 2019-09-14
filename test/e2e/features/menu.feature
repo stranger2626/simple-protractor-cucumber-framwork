@@ -13,5 +13,4 @@ Feature: Menu
       And Count of "Expanded Menu Sublists" should be "3"
       And Text of "Expanded Menu Row Titles" should contain "WHAT WE DO"
       And Count of "Expanded Menu Row Titles" should be "6"
-      And I highlight "Globus Icon"
       And I wait "10" seconds
