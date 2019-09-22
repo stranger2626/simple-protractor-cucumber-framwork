@@ -18,5 +18,5 @@ Feature: Access to other sites
 
   Examples:
   | URL                    | Title                                    |
-  | https://habrahabr.ru/  | Лучшие публикации за сутки / Хабр        |     
+  | https://habrahabr.ru/  | Top of the last 24 hours / Habr          |     
   | https://ya.ru/         | Яндекс                                   |
