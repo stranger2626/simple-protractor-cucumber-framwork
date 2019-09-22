@@ -32,7 +32,7 @@ exports.config = {
     cucumberOpts: {
         require: [path.resolve('./test/e2e/step_definitions/**/*.js')],
         ignoreUncaughtExceptions: true,
-        format: 'json:./reports/report.json',
+        format: ['json:./reports/report.json','./node_modules/cucumber-pretty'],
         tags: yargs.tag || '@epam'
     },
     onPrepare: () => {
