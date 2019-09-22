@@ -1,5 +1,5 @@
 "use strict";
-let {Then, When, Given} = require('cucumber');
+let { When } = require('cucumber');
 const highlightElement = require('../utils/stepFunctions.js').highlightElement;
 const logger = require('../../config/loggerConfig.js').logger;
 
