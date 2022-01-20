@@ -2,7 +2,7 @@
 let {Then, When, Given} = require('cucumber');
 const expect = require('chai').expect;
 const elementHelper = require('../utils/stepFunctions.js').getPageObjectElement;
-const stepFunctions = require('../utils/stepFunctions.js');
+const stepFunctions = require('../utils/stepFunctions');
 const logger = require('../../config/loggerConfig.js').logger;
 
 Then(/^"([^"]*)" should( not)? be visible$/, async (alias, notArg) => {
@@ -29,17 +29,11 @@ Then(/^Count of "([^"]*)" should( not)? be "([^"]*)"$/, async (alias, notArg, ex
 
 Then(/^Text of "([^"]*)" should( not)? contain "([^"]*)"$/, async (alias, notArg, textToContain) => {
     notArg = notArg ? ' not' : '';
-    let element = elementHelper(alias);
+    let element = await elementHelper(alias);
     let elementText = await element.getText();
     logger.info(`Text of ${alias} should${notArg} contain ${textToContain}`);
-    return expect(elementText.indexOf(textToContain)).to.not.equal(-1);    
+    return expect(elementText.indexOf(textToContain)).to.not.equal(-1);   
 });
-
-// Then(/^Page title should( not)? be "([^"]*)"$/, async (notArg, text) => {  //an example of poor error messages on failure
-//     let pageTitle = await browser.getTitle();
-//     let result = (pageTitle === text);
-//     return expect(result).to.be.equal(!notArg);    
-// });
 
 Then(/^Page title should( not)? be "([^"]*)"$/, async (notArg, text) => {
     notArg = notArg ? ' not' : '';

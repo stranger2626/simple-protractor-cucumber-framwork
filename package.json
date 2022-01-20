@@ -4,18 +4,20 @@
   "description": "A simple proctractor and cucumber bdd test automation framework",
   "main": "index.js",
   "dependencies": {
-    "chai": "^4.2.0",
+    "chai": "^4.3.4",
     "chai-as-promised": "^7.1.1",
     "cucumber": "^6.0.5",
     "cucumber-html-reporter": "^5.0.2",
     "cucumber-pretty": "^6.0.0",
     "fs-extra": "^8.1.0",
-    "protractor": "^5.4.3",
-    "protractor-cucumber-framework": "^6.2.0",
-    "winston": "^3.2.1",
-    "yargs": "^14.0.0"
+    "protractor": "^7.0.0",
+    "protractor-cucumber-framework": "^6.2.1",
+    "winston": "^3.4.0",
+    "yargs": "^17.3.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^8.6.0"
+  },
   "scripts": {
     "e2e": "protractor ./test/e2e/config/protractor.config.js",
     "pree2e": "node ./test/e2e/config/utils/cleanup.js",
@@ -25,5 +27,16 @@
     "e2e:start-server": "webdriver-manager start --versions.standalone=3.10.0"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XenaF/simple-protractor-cucumber-framwork.git"
+  },
+  "bugs": {
+    "url": "https://github.com/XenaF/simple-protractor-cucumber-framwork/issues"
+  },
+  "homepage": "https://github.com/XenaF/simple-protractor-cucumber-framwork#readme"
 }

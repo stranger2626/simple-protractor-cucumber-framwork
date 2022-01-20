@@ -1,23 +1,27 @@
 {
-    "Menu": {
-        "isCollection": false,
-        "selector": "button.hamburger-menu__button"
+    "OUR WORK": {
+        "isCollection": true,
+        "selector": ".top-navigation__item-link[href='/our-work']']"
     },
     "Expanded Menu": {
         "isCollection": false,
-        "selector": ".hamburger-menu__list"
+        "selector": "//li[@class='top-navigation__item epam js-opened']/div[@class='top-navigation__flyout']"
     },
     "Expanded Menu Sublists": {
         "isCollection": true,
-        "selector": ".hamburger-menu__sub-list"
+        "selector": ".top-navigation__flyout-list"
     },
     "Expanded Menu Row Titles": {
         "isCollection": true,
-        "selector": ".hamburger-menu__list > .hamburger-menu__item > a.hamburger-menu__link"
+        "selector": ".top-navigation__flyout-list > .top-navigation__flyout-item > a.top-navigation__main-link"
     },
     "Globus Icon": {
         "isCollection": false,
         "selector": ".location-selector__button"
+    },
+    "Slider title": {
+        "isCollection": false,
+        "selector": "title-slider__slide-row"
     }
     
 }

@@ -14,8 +14,8 @@ const reporterOptions = {
     };
 
 exports.config = {
-    allScriptsTimeout: 200000,
-    getPageTimeout: 200000,
+    allScriptsTimeout: 60000,
+    getPageTimeout: 60000,
     specs: [path.resolve('./test/e2e/features/*.feature')],
     framework: 'custom',
     frameworkPath: require.resolve('protractor-cucumber-framework'),
